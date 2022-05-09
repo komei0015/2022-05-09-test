@@ -1,0 +1,52 @@
+.login {
+    .login__contents {
+        padding: 0;
+        max-width: 545px;
+        width: 100%;
+        height: 546px;
+        margin: 0 auto;
+        margin-top: 150px;
+        background-color: white;
+
+        h1 {
+            width: auto;
+            font-weight: bold;
+            height: 40px;
+            text-align: center;
+            margin-top: 80px;
+            color: #4b4b4b;
+            font-size: 40px;
+            margin-bottom: 90px;
+        }
+
+        .login_btn {
+            margin-bottom: 50px;
+            margin-top: 80px;
+        }
+
+        .login_foot_text {
+
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                color: #4b4b4b;
+                font-weight: bold;
+            }
+        }
+
+        form {
+            span {
+                font-size: 16px;
+                width: 111px;
+                height: 15px;
+                color: #8c8c8c;
+                font-weight: bold;
+            }
+
+            .bi {
+                margin-left: -40px;
+                cursor: pointer;
+            }
+        }
+    }
+}

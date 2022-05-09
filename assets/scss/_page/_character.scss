@@ -1,0 +1,384 @@
+.character_list{
+    width: 100%;
+    max-width: 1120px;
+}
+.th_flex_character {
+    display: flex;
+    width:100%;
+    max-width: 88px;
+    font-size: 12px;
+    color: #8c8c8c;
+    font-weight: bold;
+    &:nth-of-type(1) {
+        padding-bottom: 22px;
+    }
+    &:nth-of-type(2) {
+        max-width: 279px;
+        padding-bottom: 22px;
+    }
+    
+    &:nth-of-type(3) {
+        max-width: 120px;
+    }
+    
+    &:nth-of-type(4) {
+        max-width: 104px;
+    }
+    
+    &:nth-of-type(5) {
+        max-width: 208px;
+    }
+    
+    &:nth-of-type(6) {
+        max-width: 184px;
+    }
+    
+    &:nth-of-type(7) {
+        max-width: 135px;
+    }
+}
+
+.td_character {
+    position: relative;
+    width:100%;
+    max-width: 88px;
+    padding: 23.5px 0 23.5px 0;
+    line-height: 24px;
+    color: #4b4b4b;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    &:nth-of-type(2) {
+        max-width: 279px;
+    }
+    
+    &:nth-of-type(3) {
+        max-width: 120px;
+    }
+    
+    &:nth-of-type(4) {
+        max-width: 104px;
+    }
+    
+    &:nth-of-type(5) {
+        max-width: 208px;
+    }
+    
+    &:nth-of-type(6) {
+        max-width: 184px;
+    }
+    
+    &:nth-of-type(7) {
+        max-width: 135px;
+    }
+
+    a {
+        color: #4b4b4b;
+    }
+
+}
+
+.character_icon {
+    width: 64px;
+    height: 64px;
+}
+
+.character_name {
+    display: flex;
+    flex-flow: column;
+}
+
+.character_span {
+    font-size: 12px;
+    line-height: 24px;
+    color: #8c8c8c;
+    position: absolute;
+    top: 0px;
+    white-space: nowrap;
+}
+
+
+p {
+    font-size: 16px;
+    color: #4b4b4b;
+}
+
+.button-toggle-character {
+    position: relative;
+    width: 5px;
+}
+
+.menu-character {
+    position: absolute;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0px 3px 10px #e4e4e4;
+    margin-top: 34px;
+    border-radius: 2px;
+    z-index: 2;
+    display: none;
+
+    .character_PU {
+        width: 255px;
+
+        padding: 16px 0;
+    }
+}
+
+.golnav_character {
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    color: #4b4b4b;
+    align-items: center;
+
+    &:hover {
+        background-color: #f9f9f9;
+    }
+}
+
+.character-menu_arrow_img {
+    width: 6px;
+    height: 10px;
+}
+
+.stature {
+    border: 2px solid #e6e6e6;
+}
+
+/* Character img and detail section and comics*/
+.section_contents {
+    display: flex;
+    margin-top: 50px;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.section_contents_img {
+    width: 40%;
+    max-width: 448px;
+    padding: 0;
+
+    .main_img {
+        max-width: 448px;
+        width: 100%;
+        background-color: #f9f9f9;
+        border: 1px solid #e8e8e8;
+        max-height: 702px;
+        figure{
+            width: 100%;
+            max-height: 700px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+    }
+
+    .sub_img {
+        max-width: 448px;
+        width: 100%;
+        height: 100px;
+        margin-top: 30px;
+        padding: 0;
+        display: flex;
+        gap: 16px;
+
+        figure {
+            width: 100%;
+            border: 1px solid #e8e8e8;
+            overflow: hidden;
+            cursor: pointer;
+
+            img {
+                object-fit: contain;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.section_contents_detail {
+    width: 60%;
+    max-width: 647px;
+    padding-left: 10px;
+
+    span {
+        font-size: 14px;
+        line-height: 24px;
+        color: #8c8c8c;
+        font-weight: bold;
+    }
+
+    .title_sub {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #e6e6e6;
+        padding: 10px 0 13.5px 0;
+
+        span {
+            font-size: 16px;
+            line-height: 24px;
+            color: #4b4b4b;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        h2 {
+            font-size: 24px;
+            line-height: 24px;
+            color: #4b4b4b;
+            font-weight: bold;
+        }
+    }
+
+    .character_details {
+        width: 100%;
+
+        .td_character {
+            width: 65%;
+            max-width: 420px;
+            padding: 13.5px 0 13.5px 0;
+            color: #4b4b4b;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .td_character_left {
+            width: 35%;
+            padding: 13.5px 0 13.5px 0;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            line-height: 20px;
+            color: #8c8c8c;
+            font-weight: bold;
+        }
+    }
+}
+
+//使用可能な技・戦闘スタイル一覧
+.battle_style {
+    width: 100%;
+
+    .td_character {
+        width: 50%;
+        max-width: unset;
+    }
+
+    .td_character_right {
+        width: 50%;
+        max-width: unset;
+        color: #4b4b4b;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+    }
+
+    .th_flex_character {
+        width: 50%;
+        max-width: unset;
+        padding-bottom: 0
+    }
+
+    .th_flex_character_right {
+        display: flex;
+        width: 50%;
+        max-width: unset;
+        font-size: 12px;
+        color: #8c8c8c;
+        font-weight: bold;
+        font-family: "Yu Gothic";
+        padding-bottom: 0
+    }
+
+    .character_span {
+        font-size: 12px;
+        line-height: 24px;
+        color: #8c8c8c;
+        position: absolute;
+        top: 3px;
+    }
+}
+
+.border_li {
+    border-bottom: #e6e6e6;
+}
+
+/* 色設定 */
+// :root {
+//  --bg: rgb(224, 224, 224);
+//  --bar: rgb(0, 255, 0);
+// }
+
+/* グリッド */
+.slidebar-multithumb {
+    display: grid;
+    padding: 1rem;
+}
+
+
+/* inputのスタイル */
+.slidebar-multithumb input[type="range"] {
+    grid-column: 1;
+    grid-row: 2;
+    pointer-events: none;
+    -webkit-appearance: none;
+    background: none;
+    overflow: hidden;
+    border: #4b4b4b 1px solid;
+}
+
+/* つまみ部分のスタイル */
+.slidebar-multithumb ::-webkit-slider-thumb {
+    pointer-events: auto;
+    -webkit-appearance: none;
+    width: 0.5rem;
+    height: 1rem;
+}
+
+/* それぞれのつまみのスタイル */
+.thumb-1 {
+    z-index: 1;
+}
+
+.thumb-1::-webkit-slider-runnable-track {
+    background: none;
+}
+
+.thumb-2::-webkit-slider-runnable-track {
+    background: var(--bg);
+}
+
+.thumb-1::-webkit-slider-thumb {
+    background: rgb(255, 139, 139);
+    box-shadow: -100vw 0 0 100vw var(--bg);
+}
+
+.thumb-2::-webkit-slider-thumb {
+    background: rgb(77, 169, 255);
+    box-shadow: -100vw 0 0 100vw var(--bar);
+}
+
+
+.character_search_flex {
+    display: flex;
+    justify-content: center;
+}

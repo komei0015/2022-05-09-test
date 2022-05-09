@@ -1,0 +1,1325 @@
+/*========= 　共通部分  =========*/
+html {
+	zoom: 80%;
+}
+
+body {
+	font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+.main {
+	display: flex;
+	padding-top: 64px;
+	min-height: 125vh;
+}
+
+.contents {
+	width: 100%;
+	background-color: #f9f9f9;
+	// padding-left: 255px;
+	border-left: 1px solid #e6e6e6;
+	padding-bottom: 170px;
+	min-height: 905px;
+
+	>div {
+		width: 100%;
+		max-width: 1200px;
+		border: 2px solid #e6e6e6;
+		padding: 38px;
+		margin: 0 auto;
+		background-color: #fff;
+		border-radius: 4px;
+		margin-top: 50px;
+	}
+}
+
+/*=========  セクションタイトル  =========*/
+.section {
+	&__header {
+		text-align: left;
+		border-bottom: 2px solid #e6e6e6;
+		font-size: 22px;
+		font-weight: bold;
+		color: #4b4b4b;
+		padding-bottom: 15px;
+		margin-bottom: 24px;
+	}
+
+	&__title {
+		border-bottom: solid 2px #d72a28;
+		padding-bottom: 13px;
+		display: inline;
+	}
+
+}
+
+/*=========  サブタイトル  =========*/
+.sub_title {
+	font-size: 18px;
+	position: relative;
+	font-weight: bold;
+	color: #4b4b4b;
+	border-left: 4px solid #d72a28;
+	padding-left: 16px;
+}
+
+/*========= 　確定ボタン  =========*/
+.confirm_btn {
+	width: 256px;
+	max-width: 256px;
+	height: 64px;
+	background-color: #d72a28;
+	border: none;
+	filter: drop-shadow(0px 6px 8px rgba(215, 42, 40, 0.4));
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+	padding: 0;
+	border-radius: 2px;
+
+	&:hover {
+		background-color: #e37170;
+	}
+
+	&:disabled {
+		pointer-events: none;
+		background-color: #8c8c8c;
+		filter: unset;
+	}
+}
+
+/*========= 　キャンセルボタン  =========*/
+.cancel_btn {
+	width: 256px;
+	max-width: 256px;
+	height: 64px;
+	background-color: #fff;
+	border: 2px solid #e6e6e6;
+	font-size: 18px;
+	cursor: pointer;
+	color: #8c8c8c;
+	padding: 0;
+	border-radius: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		border: 2px solid #eee;
+		color: #b2b2b2
+	}
+}
+
+/*====== ログインボタン ======*/
+.login_btn {
+	width: 100%;
+	max-width: 543px;
+	height: 64px;
+	border-radius: 2px;
+	color: #fff;
+	filter: drop-shadow(0px 6px 8px rgba(215, 42, 40, 0.4));
+	background-color: #d73332;
+	font-weight: bold;
+	font-size: 20px;
+
+	&:hover {
+		background-color: #e37170;
+	}
+
+	&:disabled {
+		pointer-events: none;
+		background-color: #8c8c8c;
+		filter: unset;
+	}
+}
+
+/*========= 　チェックボタン  =========*/
+
+// 元あるチェックボタンを消しています。
+input[type="checkbox"] {
+	display: none;
+}
+
+input#Editor[type="checkbox"]+label,
+input#Admin[type="checkbox"]+label,
+input#Viewer[type="checkbox"]+label,
+input#Viewer_base[type="checkbox"]+label,
+input#Editor_hover[type="checkbox"]+label,
+input#all1[type="checkbox"]+label,
+input#Editor2[type="checkbox"]+label,
+input#Admin3[type="checkbox"]+label,
+input#Chek4[type="checkbox"]+label,
+input#Viewer5[type="checkbox"]+label,
+input#all6[type="checkbox"]+label,
+input#Editor7[type="checkbox"]+label,
+input#Admin8[type="checkbox"]+label,
+input#Chek9[type="checkbox"]+label,
+input#Viewer10[type="checkbox"]+label,
+input#all11[type="checkbox"]+label,
+input#Editor12[type="checkbox"]+label,
+input#Admin13[type="checkbox"]+label,
+input#Chek14[type="checkbox"]+label,
+input#Viewer15[type="checkbox"]+label,
+input#all16[type="checkbox"]+label,
+input#Editor17[type="checkbox"]+label,
+input#Admin18[type="checkbox"]+label,
+input#Chek19[type="checkbox"]+label,
+input#Viewer20[type="checkbox"]+label,
+input#all21[type="checkbox"]+label,
+input#Editor22[type="checkbox"]+label,
+input#Admin23[type="checkbox"]+label,
+input#Chek24[type="checkbox"]+label,
+input#Viewer25[type="checkbox"]+label {
+	position: relative;
+	padding-left: 15px;
+	cursor: pointer;
+}
+
+
+// チェックボタン選択前の枠の色の変化やサイズを変更できます。
+input#Editor[type="checkbox"]+label::before,
+input#Admin[type="checkbox"]+label::before,
+input#Viewer[type="checkbox"]+label::before,
+input#Viewer_base[type="checkbox"]+label::before,
+input#all1[type="checkbox"]+label::before,
+input#Editor2[type="checkbox"]+label::before,
+input#Admin3[type="checkbox"]+label::before,
+input#Chek4[type="checkbox"]+label::before,
+input#Viewer5[type="checkbox"]+label::before,
+input#all6[type="checkbox"]+label::before,
+input#Editor7[type="checkbox"]+label::before,
+input#Admin8[type="checkbox"]+label::before,
+input#Chek9[type="checkbox"]+label::before,
+input#Viewer10[type="checkbox"]+label::before,
+input#all11[type="checkbox"]+label::before,
+input#Editor12[type="checkbox"]+label::before,
+input#Admin13[type="checkbox"]+label::before,
+input#Chek14[type="checkbox"]+label::before,
+input#Viewer15[type="checkbox"]+label::before,
+input#all16[type="checkbox"]+label::before,
+input#Editor17[type="checkbox"]+label::before,
+input#Admin18[type="checkbox"]+label::before,
+input#Chek19[type="checkbox"]+label::before,
+input#Viewer20[type="checkbox"]+label::before,
+input#all21[type="checkbox"]+label::before,
+input#Editor22[type="checkbox"]+label::before,
+input#Admin23[type="checkbox"]+label::before,
+input#Chek24[type="checkbox"]+label::before,
+input#Viewer25[type="checkbox"]+label::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	cursor: pointer;
+	border: 1px solid #e6e6e6;
+	background-color: #f9f9f9;
+}
+
+input#Viewer_base[type="checkbox"]+label {
+	content: "";
+	display: block;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	border: 1px solid #e6e6e6;
+	background-color: #f9f9f9;
+}
+
+input#Editor_hover[type="checkbox"]+label {
+	content: "";
+	display: block;
+	background: #d72a28;
+	border-bottom: solid 2px #b40200;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+}
+
+// チェックボタン選択前の「✓」を表示や色の変化、サイズを変更できます。
+input#Editor[type="checkbox"]+label::after,
+input#Admin[type="checkbox"]+label::after,
+input#Viewer[type="checkbox"]+label::after,
+input#Viewer_base[type="checkbox"]+label::after,
+input#Editor_hover[type="checkbox"]+label::after,
+input#all1[type="checkbox"]+label::after,
+input#Editor2[type="checkbox"]+label::after,
+input#Admin3[type="checkbox"]+label::after,
+input#Chek4[type="checkbox"]+label::after,
+input#Viewer5[type="checkbox"]+label::after,
+input#all6[type="checkbox"]+label::after,
+input#Editor7[type="checkbox"]+label::after,
+input#Admin8[type="checkbox"]+label::after,
+input#Chek9[type="checkbox"]+label::after,
+input#Viewer10[type="checkbox"]+label::after,
+input#all11[type="checkbox"]+label::after,
+input#Editor12[type="checkbox"]+label::after,
+input#Admin13[type="checkbox"]+label::after,
+input#Chek14[type="checkbox"]+label::after,
+input#Viewer15[type="checkbox"]+label::after,
+input#all16[type="checkbox"]+label::after,
+input#Editor17[type="checkbox"]+label::after,
+input#Admin18[type="checkbox"]+label::after,
+input#Chek19[type="checkbox"]+label::after,
+input#Viewer20[type="checkbox"]+label::after,
+input#all21[type="checkbox"]+label::after,
+input#Editor22[type="checkbox"]+label::after,
+input#Admin23[type="checkbox"]+label::after,
+input#Chek24[type="checkbox"]+label::after,
+input#Viewer25[type="checkbox"]+label::after {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 6px;
+	box-sizing: border-box;
+	border-bottom: 2px solid #8e8e8e;
+	border-left: 2px solid #8e8e8e;
+	position: absolute;
+	top: 40%;
+	left: 8px;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg) translateY(-50%);
+	cursor: pointer;
+}
+
+input#Viewer[type="checkbox"]+label::after {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 6px;
+	box-sizing: border-box;
+	border-bottom: 2px solid #8e8e8e;
+	border-left: 2px solid #8e8e8e;
+	position: absolute;
+	top: 40%;
+	left: 8px;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg) translateY(-50%);
+	cursor: pointer;
+}
+
+input#Editor_hover[type="checkbox"]+label::after {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 6px;
+	box-sizing: border-box;
+	border-bottom: 2px solid #fff;
+	border-left: 2px solid #fff;
+	position: absolute;
+	top: 40%;
+	left: 8px;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg) translateY(-50%);
+}
+
+// チェックボタン選択後の枠の背景色を変更できます。
+input#Editor[type="checkbox"]:checked+label::before,
+input#Admin[type="checkbox"]:checked+label::before,
+input#Viewer[type="checkbox"]:checked+label::before,
+input#Viewer_base[type="checkbox"]:checked+label::before,
+input#all1[type="checkbox"]:checked+label::before,
+input#Editor2[type="checkbox"]:checked+label::before,
+input#Admin3[type="checkbox"]:checked+label::before,
+input#Chek4[type="checkbox"]:checked+label::before,
+input#Viewer5[type="checkbox"]:checked+label::before,
+input#all6[type="checkbox"]:checked+label::before,
+input#Editor7[type="checkbox"]:checked+label::before,
+input#Admin8[type="checkbox"]:checked+label::before,
+input#Chek9[type="checkbox"]:checked+label::before,
+input#Viewer10[type="checkbox"]:checked+label::before,
+input#all11[type="checkbox"]:checked+label::before,
+input#Editor12[type="checkbox"]:checked+label::before,
+input#Admin13[type="checkbox"]:checked+label::before,
+input#Chek14[type="checkbox"]:checked+label::before,
+input#Viewer15[type="checkbox"]:checked+label::before,
+input#all16[type="checkbox"]:checked+label::before,
+input#Editor17[type="checkbox"]:checked+label::before,
+input#Admin18[type="checkbox"]:checked+label::before,
+input#Chek19[type="checkbox"]:checked+label::before,
+input#Viewer20[type="checkbox"]:checked+label::before,
+input#all21[type="checkbox"]:checked+label::before,
+input#Editor22[type="checkbox"]:checked+label::before,
+input#Admin23[type="checkbox"]:checked+label::before,
+input#Chek24[type="checkbox"]:checked+label::before,
+input#Viewer25[type="checkbox"]:checked+label::before {
+
+	background: #d72a28;
+	border-bottom: solid 2px #b40200;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	width: 22px;
+	height: 20px;
+}
+
+// チェックボタン選択後の「✓」の色やサイズを変更できます。
+input#Editor[type=checkbox]:checked+label::after,
+input#Admin[type=checkbox]:checked+label::after,
+input#Viewer[type=checkbox]:checked+label::after,
+input#Viewer_base[type=checkbox]:checked+label::after,
+input#all1[type=checkbox]:checked+label::after,
+input#Editor2[type=checkbox]:checked+label::after,
+input#Admin3[type=checkbox]:checked+label::after,
+input#Chek4[type=checkbox]:checked+label::after,
+input#Viewer5[type=checkbox]:checked+label::after,
+input#all6[type=checkbox]:checked+label::after,
+input#Editor7[type=checkbox]:checked+label::after,
+input#Admin8[type=checkbox]:checked+label::after,
+input#Chek9[type=checkbox]:checked+label::after,
+input#Viewer10[type=checkbox]:checked+label::after,
+input#all11[type=checkbox]:checked+label::after,
+input#Editor12[type=checkbox]:checked+label::after,
+input#Admin13[type=checkbox]:checked+label::after,
+input#Chek14[type=checkbox]:checked+label::after,
+input#Viewer15[type=checkbox]:checked+label::after,
+input#all16[type=checkbox]:checked+label::after,
+input#Editor17[type=checkbox]:checked+label::after,
+input#Admin18[type=checkbox]:checked+label::after,
+input#Chek19[type=checkbox]:checked+label::after,
+input#Viewer20[type=checkbox]:checked+label::after,
+input#all21[type=checkbox]:checked+label::after,
+input#Editor22[type=checkbox]:checked+label::after,
+input#Admin23[type=checkbox]:checked+label::after,
+input#Chek24[type=checkbox]:checked+label::after,
+input#Viewer25[type=checkbox]:checked+label::after {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 6px;
+	box-sizing: border-box;
+	border-bottom: 2px solid #fff;
+	border-left: 2px solid #fff;
+	position: absolute;
+	top: 40%;
+	left: 8px;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg) translateY(-50%);
+}
+
+
+
+/*========= 　入力フォーム  =========*/
+.input_form {
+	width: 100%;
+	max-width: 544px;
+	height: 56px;
+	box-sizing: border-box;
+	border: 2px solid #e6e6e6;
+	border-radius: 2px;
+	background-color: #f9f9f9;
+	font-size: 1.5em;
+	margin-top: 15px;
+	padding-left: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #4d4d4d;
+	margin-bottom: 20px;
+
+	&:focus {
+		background-color: #fef6f0;
+		border: 2px solid #ff8829;
+	}
+}
+
+.input_form_error {
+	border: 2px solid #d72a28;
+	background-color: #fef0f0;
+}
+
+//Form Error Texts
+form {
+	.error_msg {
+		font-size: 14px !important;
+		line-height: 22px;
+		color: #d73332 !important;
+		text-align: center;
+		margin-left: 18px;
+	}
+
+	#error_text_bottom {
+		font-size: 14px;
+		line-height: 22px;
+		color: #d73332;
+		width: 544px;
+		text-align: center;
+		font-weight: bold;
+		margin: 0 auto 30px;
+	}
+
+	center {
+		position: relative;
+		top: 30px;
+	}
+}
+
+//Foot text
+.login_foot_text {
+	width: 100%;
+	max-width: 543px;
+	height: 156px;
+	font-size: 14px;
+	line-height: 24px;
+	color: #4b4b4b;
+	font-weight: bold;
+}
+
+// サムネイル画像・大
+.figure {
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		&:nth-of-type(n+2) {
+			margin-left: 32px;
+		}
+
+		figure {
+			width: 100%;
+			max-width: 352px;
+		}
+
+		span {
+			font-weight: bold;
+			display: block;
+			text-align: center;
+			margin: 16px auto 24px;
+			color: #4b4b4b;
+		}
+
+		a:hover {
+			figure {
+				opacity: .7;
+			}
+
+			span {
+				color: #d72a28;
+			}
+		}
+	}
+}
+
+// サムネイル画像・小
+.thumb {
+	&__item {
+		cursor: pointer;
+		width: 100%;
+		max-width: 160px;
+
+		&:hover {
+			.thumb__figure {
+				opacity: .7;
+			}
+
+			span,
+			p {
+				color: #d72a28;
+			}
+		}
+	}
+
+	&__figure {
+		width: 100%;
+		max-width: 160px;
+		height: 104px;
+		border: 1px solid #e6e6e6;
+		border-radius: 4px;
+		background-color: #f9f9f9;
+
+		img {
+			object-fit: contain;
+			height: 100%;
+		}
+
+		&.active {
+			border: 2px solid #d72a28;
+		}
+	}
+
+	&__cat {
+		margin-top: 15px;
+
+		span {
+			font-size: 12px;
+			font-weight: bold;
+			color: #8c8c8c;
+			margin-bottom: 11px;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: bold;
+			color: #4b4b4b;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			overflow: hidden;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+		}
+	}
+}
+
+// スライド
+.swiper__contents {
+	position: relative;
+	width: 100%;
+	max-width: 1120px;
+
+	.swiper-container {
+		margin-top: 24px;
+		overflow: hidden;
+	}
+
+	.swiper-main {
+		position: relative;
+		overflow: visible;
+	}
+
+	.swiper-slide {
+		display: flex;
+		gap: 30px;
+
+		@include forTop02 {
+			gap: 10px;
+		}
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		position: absolute;
+		top: 0;
+		width: 36px;
+		height: 104px;
+		z-index: 3;
+		cursor: pointer;
+		background-size: 12px 16px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(/assets/img/common/swiper_arrow_next.svg);
+		transform: rotate(180deg);
+		z-index: 2;
+	}
+
+	.swiper-button-prev {
+		left: -36px;
+	}
+
+	.swiper-button-next {
+		transform: initial;
+		right: -36px;
+	}
+
+	.swiper-pagination {
+		top: 55px;
+		right: 40px;
+		display: flex;
+		gap: 8px;
+		z-index: 3;
+	}
+
+	.swiper-pagination-bullet {
+		border-radius: 0;
+		width: 16px;
+		height: 4px;
+		opacity: 1;
+		background-color: #e6e6e6;
+
+		&-active {
+			background-color: #d72a28;
+		}
+	}
+
+}
+
+
+/*========= 　ページネーション  =========*/
+
+.pagination {
+	display: flex;
+	gap: 0.3rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-top: 20px;
+
+	li {
+		width: 40px;
+		height: 40px;
+	}
+
+	a {
+		display: inline-block;
+		color: black;
+		border: 2px solid #dedede;
+		text-decoration: none;
+		width: 40px;
+		height: 40px;
+		line-height: 35px;
+		text-align: center;
+		position: relative;
+		border-radius: 2px;
+
+		&:hover {
+			background: #d72a28;
+			border-bottom: solid 4px #b40200;
+			border-top: none;
+			border-left: none;
+			border-right: none;
+			color: white;
+			line-height: 40px;
+
+			.right_arrow {
+				fill: #fff;
+			}
+		}
+	}
+
+	.active {
+		a {
+			background: #d72a28;
+			border-bottom: solid 4px #b40200;
+			border-top: none;
+			border-left: none;
+			border-right: none;
+			color: white;
+			line-height: 40px;
+		}
+	}
+
+	.disabled {
+		a {
+			pointer-events: none;
+			color: #cdcdcd;
+			border: 2px solid #f1f1f1;
+
+			.left {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	i {
+		line-height: 40px;
+	}
+
+	&_wrapper {
+		position: relative;
+		max-width: 1120px;
+		width: 100%;
+		height: 78px;
+	}
+
+	&_arrow_one_img {
+		width: 6px;
+		height: 10px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+// csvダウンロード
+.csv__download {
+	position: absolute;
+	right: 41px;
+	top: 20px;
+	width: 160px;
+	height: 40px;
+	color: #8c8c8c;
+
+	a {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		width: 100%;
+		height: 100%;
+		padding-left: 14px;
+		border: 2px solid #e6e6e6;
+		border-radius: 2px;
+
+		.csv__icon {
+			width: 16px;
+			height: 20px;
+
+			.s0 {
+				fill: #8c8c8c
+			}
+		}
+
+		span {
+			font-size: 14px;
+			color: #8c8c8c;
+			font-weight: bold;
+		}
+
+		&:hover {
+			border: 2px solid #d72a28;
+
+			.csv__icon {
+				.s0 {
+					fill: #d72a28;
+				}
+			}
+
+			span {
+				color: #d72a28;
+			}
+		}
+	}
+}
+
+//  メディアファイル編集・登録　画像削除 アイコン
+.upload_delete {
+	width: 48px;
+	height: 48px;
+	border-radius: 24px;
+	filter: drop-shadow(0px 6px 8px rgba(140, 140, 140, 0.3));
+	background-color: #fff;
+	display: none;
+	cursor: pointer;
+	z-index: 1;
+
+	&.active {
+		display: block;
+	}
+
+	&:hover {
+		&::before {
+			content: "";
+			display: block;
+			width: 48px;
+			height: 48px;
+			border-radius: 24px;
+			background-color: #fff;
+			position: absolute;
+			opacity: .6;
+			left: 0;
+			top: 0;
+		}
+
+		&::after {
+			content: "画像を削除";
+			display: block;
+			padding: 0 10px;
+			font-size: 12px;
+			line-height: 32px;
+			color: #ffffff;
+			font-weight: bold;
+			text-align: center;
+			width: 80px;
+			border-radius: 2px;
+			background-color: #4b4b4b;
+			position: absolute;
+			left: 56px;
+			top: 8px;
+		}
+	}
+}
+
+// メディアビューワ
+.pop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	zoom: 125%;
+
+	&.active {
+		display: block;
+	}
+
+	&_header {
+		width: 100%;
+		height: 64px;
+		background-color: rgba(17, 17, 17, 1);
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 0 40px;
+		z-index: 9;
+	}
+
+	&_info {
+		margin-right: auto;
+		height: 100%;
+		padding-left: 16px;
+		padding-right: 58px;
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		position: relative;
+		z-index: 9;
+		cursor: pointer;
+
+		figure {
+			width: 24px;
+			height: 24px;
+		}
+
+		span {
+			font-size: 16px;
+			color: #ffffff;
+			font-weight: bold;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			width: 7px;
+			height: 7px;
+			border-top: 3px solid #fff;
+			border-right: 3px solid #fff;
+			transform: rotate(135deg);
+			position: absolute;
+			right: 16px;
+			top: 40%;
+		}
+
+		&:hover {
+			&::before {
+				content: "";
+				width: 100%;
+				height: 64px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: #ffffff;
+				opacity: .3;
+				pointer-events: none;
+			}
+		}
+	}
+
+	&_info_pu {
+		padding: 30px 24px;
+		width: 250px;
+		border-radius: 2px;
+		background-color: #ffffff;
+		filter: drop-shadow(0px 6px 8px rgba(140, 140, 140, 0.3));
+		display: none;
+		position: absolute;
+		top: 80px;
+		left: 40px;
+		z-index: 11;
+
+		&.active {
+			display: block;
+		}
+
+		.pop_info_name {
+			margin-bottom: 16px;
+		}
+
+		h3 {
+			font-size: 14px;
+			color: #999999;
+			font-weight: bold;
+			margin-bottom: 8px;
+		}
+
+		p {
+			font-size: 14px;
+			color: #666666;
+			font-weight: bold;
+		}
+	}
+
+	&_download {
+		padding: 0 18px;
+		height: 64px;
+		position: relative;
+		z-index: 9;
+		cursor: pointer;
+
+		a {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			height: 100%;
+		}
+
+		figure {
+			width: 16px;
+			height: 24px;
+
+			.s0 {
+				fill: #ffffff;
+			}
+		}
+
+		span {
+			font-size: 14px;
+			color: #ffffff;
+			font-weight: bold;
+		}
+
+		&:hover {
+			&::before {
+				content: "";
+				width: 100%;
+				height: 64px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: #ffffff;
+				opacity: .3;
+				pointer-events: none;
+			}
+		}
+	}
+
+	&_close {
+		margin-left: 14px;
+		z-index: 9;
+
+		figure {
+			width: 48px;
+			height: 48px;
+			position: relative;
+			cursor: pointer;
+
+			&:hover {
+				&::before {
+					content: "";
+					width: 48px;
+					height: 48px;
+					border-radius: 24px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-color: #ffffff;
+					opacity: .3;
+					pointer-events: none;
+				}
+			}
+		}
+	}
+
+	&_main {
+		height: calc(100vh - 112px);
+		width: 100%;
+		position: relative;
+		z-index: 8;
+		overflow: hidden;
+	}
+
+	&_prev,
+	&_next {
+		position: absolute;
+		top: 50%;
+		width: 64px;
+		height: 64px;
+		border-radius: 32px;
+		background-color: #111111;
+		background-image: url(/assets/img/common/pop_arrow.svg);
+		background-size: 14px;
+		background-repeat: no-repeat;
+		background-position: 52% 48%;
+		cursor: pointer;
+		z-index: 9;
+
+		&:hover {
+			&::before {
+				content: "";
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: #ffffff;
+				opacity: .3;
+				pointer-events: none;
+				z-index: 9;
+			}
+		}
+
+		&.disable {
+			pointer-events: none;
+			display: none;
+		}
+	}
+
+	&_prev {
+		left: 40px;
+		transform: rotate(180deg) translateY(50%);
+	}
+
+	&_next {
+		right: 40px;
+		transform: translateY(-50%);
+	}
+
+	&_item {
+		figure {
+			width: 100%;
+			height: calc(100vh - 112px);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				width: auto;
+				height: 720px;
+				object-fit: contain;
+				z-index: 8;
+				-webkit-user-drag: none;
+				position: relative;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+
+	&_shadow {
+		width: 100vw;
+		height: calc(100% - 112px);
+		top: 64px;
+		left: 0;
+		background-color: rgba(17, 17, 17, 0.9);
+		position: fixed;
+		z-index: 7;
+		cursor: pointer;
+	}
+
+	&_tool {
+		height: 48px;
+		background-color: rgba(17, 17, 17, 1);
+		z-index: 9;
+		padding: 0 40px;
+		display: flex;
+		align-items: center;
+		gap: 32px;
+	}
+
+	&_zoom {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	&_zoomin,
+	&_zoomout {
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background-color: #111111;
+		position: relative;
+		cursor: pointer;
+
+		&:hover {
+			&::before {
+				content: "";
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: #ffffff;
+				opacity: .3;
+				pointer-events: none;
+				z-index: 9;
+			}
+		}
+	}
+
+	&_seekbar_wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 18px;
+		position: relative;
+	}
+
+	&_seekbar {
+		width: 100%;
+		height: 36px;
+		background-color: #0B121F;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		padding: 0 20px;
+	}
+
+	&_postion {
+		color: #fff;
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	&_seekbar_preview {
+		position: fixed;
+		bottom: 60px;
+		left: 50%;
+		display: none;
+		flex-direction: column;
+		padding: 8px;
+		border-radius: 6px;
+		background-color: rgb(10, 20, 33);
+		transform: translateX(-50%);
+		z-index: 10;
+
+		&.active {
+			display: flex;
+		}
+
+		figure {
+			background-color: rgb(0, 0, 0);
+
+			img {
+				width: 200px;
+				height: 140px;
+				object-fit: contain;
+			}
+		}
+	}
+
+	&_pre_postion {
+		color: #fff;
+		font-weight: bold;
+		font-size: 16px;
+		margin-top: 4px;
+		text-align: center;
+	}
+
+	&_trigger {
+		cursor: pointer;
+	}
+
+}
+
+#image-slider {
+	cursor: pointer;
+	background: #545B65;
+	height: 10px;
+	width: 100%;
+	border-radius: 4px;
+	outline: 0;
+}
+
+// 送信成功PU
+#success_confirm_pop.active {
+	position: fixed;
+	color: #fff;
+	height: 50px;
+	min-width: 543px;
+	background-color: #202124;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	left: 40px;
+	bottom: 40px;
+	z-index: 5;
+	padding: 20px;
+}
+
+// 仮パスワードPU
+.passpop {
+	&__overlay {
+		display: flex;
+		justify-content: center;
+		overflow: auto;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transform: scale(0);
+		z-index: 10;
+		cursor: initial;
+
+		.form_btn_inner {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__trigger {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: #2b2b2b;
+		opacity: .7;
+		pointer-events: none;
+	}
+
+	&__content {
+		position: relative;
+		align-self: center;
+		max-width: 624px;
+		width: 100%;
+		height: 346px;
+		padding: 40px;
+		box-sizing: border-box;
+		background: #fff;
+		line-height: 1.4em;
+		transition: 0.5s;
+		pointer-events: auto;
+		box-shadow: 0px 3px 10px #e4e4e4;
+		border-radius: 2px;
+		cursor: initial;
+	}
+
+	&__wrapper {
+
+		.password_text {
+			text-align: left;
+			width: 544px;
+			height: 56px;
+			background-color: #f9f9f9;
+			border: 1px solid #e5e5e5;
+			display: flex;
+			align-items: center;
+			margin-bottom: 32px;
+			padding-top: 8px;
+			padding-left: 20px;
+
+		}
+
+		.close_btn {
+			cursor: pointer;
+		}
+
+		.error_message {
+			p {
+				color: #d72a28;
+				text-align: center;
+				margin-top: 25px;
+			}
+		}
+
+		input:checked~.passpop__overlay {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+}
